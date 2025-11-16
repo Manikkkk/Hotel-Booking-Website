@@ -1,0 +1,1014 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Cookie&family=Poppins:wght@600&display=swap');
+
+:root {
+    --bg-text-shadow: 0 2px 4px rgb(13 0 77 / 8%), 0 3px 6px rgb(13 0 77 / 8%), 0 8px 16px rgb(13 0 77 / 8%);
+    --bg-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.621);
+}
+*::-webkit-scrollbar{
+    width: .4rem;
+}
+*::-webkit-scrollbar-track{
+    background: rgb(6, 6, 44);
+}
+*::-webkit-scrollbar-thumb{
+    background: #0040ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* text-shadow: var(--bg-text-shadow); */
+}
+
+nav{
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    background-color: #fff;
+    top: 0;
+    margin-bottom: 60px;
+    z-index: 200;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.386);
+}
+
+nav ul{
+    width: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+    color: black;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+ul li{
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+
+ul li:hover::after{
+    content: "";
+    position: absolute;
+    display: flex;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    /* display: none; */
+    transition: ease 2s;
+}
+
+
+.btnn{
+
+    padding-top: 250px;
+    padding-left: 650px;
+  
+}
+.btnn .btn{
+      padding: 12px 30px;
+     /* Bootstrap primary blue */
+    /* color: rgb(22, 4, 4); */
+    border: 2px solid black;
+    /* background-color: ; */
+    border-radius: 6px;
+    font-size: 36px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+.btn:hover {
+    background-color: #2113e7; /* darker blue on hover */
+}
+
+
+
+ul li a:hover{
+    color: black;
+}
+
+.logo {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+}
+.logo .bluebirdlogo {
+    height: 100%;
+}
+
+.logo p {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: rgb(66, 68, 74);
+    text-shadow: var(--bg-text-shadow);
+}
+
+#firstsection{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    /* z-index: 2000; */
+}
+
+
+#firstsection .carousel-inner{
+width: 100%;
+height: 100vh;
+    /* padding: 0 50px; */
+}
+#firstsection .carousel-inner::after{
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}
+
+#firstsection .carousel-item{
+    overflow: hidden;
+}
+
+#firstsection .carousel-item img{
+    border-radius: 13px;
+    margin-top: 220px;
+    margin-left: 280px;
+    object-fit: cover;
+
+}
+
+
+ .welcomeline{
+    margin-top: 120px;
+    position: absolute; 
+    display: flex;
+    height: 70px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.welcometag{
+    font-size: 70px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    line-height: 50px;
+    padding: 5px;
+}
+
+/* secondsection */
+
+#secondsection{
+    height: 100vh;
+    width: 100%;
+}
+
+.ourroom{
+    position: relative;
+    top: 90px;
+    height: 400px;
+    width: 100%;
+    /* background-color: #0040ff; */
+}
+
+.head{
+    #chatbox-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 300px;
+        font-family: 'Poppins', sans-serif;
+        z-index: 999;
+      }
+      
+      #chatbox-header {
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px 10px 0 0;
+      }
+      
+      #chatbox {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 0 0 10px 10px;
+        max-height: 400px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      }
+      
+      #chat-messages {
+        padding: 10px;
+        height: 250px;
+        overflow-y: auto;
+        background-color: #f9f9f9;
+      }
+      
+      .message {
+        margin-bottom: 10px;
+        padding: 8px 12px;
+        border-radius: 10px;
+        max-width: 80%;
+      }
+      
+      .message.bot {
+        background-color: #e1f0ff;
+        align-self: flex-start;
+      }
+      
+      .message.user {
+        background-color: #d4edda;
+        align-self: flex-end;
+        text-align: right;
+      }
+      
+      #chat-input-area {
+        display: flex;
+        padding: 10px;
+        border-top: 1px solid #ccc;
+      }
+      
+      #chat-input {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      #chat-input-area button {
+        margin-left: 10px;
+        padding: 8px 12px;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        border-radius: 5px;
+      }
+      
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.roomselect{
+    display: flex;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.roomselect .roombox{
+    height: 100%;
+    width: 300px;
+    color: black;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.386);
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    /* margin: 0 20px; */
+}
+
+.hotelphoto{
+    height: 250px;
+    width: 100%;
+    background-color: aquamarine;
+    background-size: cover;
+}
+
+.h1{
+    background-image: url(../images/rooms/3.jpg);
+}
+.h2{
+    background-image: url(../images/rooms/4.jpg);
+}
+.h3{
+    background-image: url(../images/rooms/5.jpg);
+}
+.h4{
+    background-image: url(../images/rooms/6.jpg);
+}
+
+.f-font{
+    font-size: 17px;
+    font-family: 'Merienda', cursive;
+    font-weight: none;
+}
+
+.roomdata{
+    text-align: center;
+}
+
+.roomdata h2{
+color: #000;
+font-size: 30px;
+}
+
+.sevices{
+    display: flex;
+}
+
+.services i{
+    color: #000;
+    margin: 7px;
+}
+
+.bookbtn{
+    padding-bottom: 10px;
+   margin: 50px;
+}
+
+/* roombookcss */
+
+#guestdetailpanel{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.386);
+    position: fixed;
+    z-index: 10000;
+}
+.logoutbtn{
+    height: 20px;
+    width: 200px;
+    border: 1px solid gray;
+}
+
+#thirdsection{
+    height: 80vh;
+    width: 100%;
+    /* background-color: black; */
+}
+
+.facility{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.facility .box{
+    border-radius: 7px;
+    height: 100%;
+    width: 300px;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.386);
+}
+
+.facility .box h2{
+    text-align: center;
+    position: relative;
+    top: 80%;
+    color: white;
+    background-color: #0000005e;
+}
+.facility .box:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.box:nth-child(1){
+    background-image: url(../images/facilities/pool.jpeg);
+    background-size: cover;
+}
+.box:nth-child(2){
+    background-image: url(../images/facilities/spa.jpg);
+    background-size: cover;
+}
+.box:nth-child(3){
+    background-image: url(../images/facilities/food.jpg);
+    background-size: cover;
+}
+.box:nth-child(4){
+    background-image: url(../images/facilities/gym.jpg);
+    background-size: cover;
+}
+.box:nth-child(5){
+    background-image: url(../images/facilities/helipad.jpg);
+    background-size: cover
+}
+
+#contactus{
+    height: 70px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 100px;
+}
+
+#contactus .social{
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#contactus i{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* responsive stuff */
+
+@media(max-width: 30rem){
+    nav{
+        justify-content: center;
+        position: relative;
+        background-color: #96a8f88c;
+    }
+    nav ul{
+        display: none;
+    }
+    #firstsection{
+        height: 50vh;
+        text-align: center;
+    }
+    #firstsection .carousel-inner{
+        height: 50vh;
+    }
+    #firstsection .carousel-inner::after{
+        height: 50vh;
+    }
+    #firstsection .carousel-item img{
+        height: 50vh;
+    }
+    #firstsection .welcomeline{
+        height: 50vh;
+        
+    }
+    #firstsection .welcometag{
+        text-align: center;
+        font-size: 50px;
+        line-height: 60px;
+    }
+    #secondsection{
+        height: auto;
+    }
+    #secondsection{
+        height: 240vh;
+    }
+    #secondsection img{
+        display: none;
+    }
+    .ourroom{
+        top: 30px;
+        height: auto;
+    }
+    .roomselect{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .roomselect .roombox{
+        width: 75%;
+    }
+
+
+    #thirdsection{
+        height: 100vh;
+    }
+    .facility{
+        height: 70%;
+        flex-wrap: wrap;
+    }
+    .facility .box{
+        margin: 0;
+        padding: 0;
+        height: 55%;
+        width: 50%; 
+    }
+
+    .facility .box h2{
+        font-size: 18px;
+        flex-wrap: wrap;
+    }
+    
+    .box:nth-child(5){
+        display: none;
+    }
+
+    #contactus{
+        padding: 0 30px;
+    }
+}
+
+/* Room search and filter styles */
+.room-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 0 20px;
+}
+
+.search-container {
+  flex: 1;
+  margin-right: 20px;
+  min-width: 200px;
+}
+
+.filter-container {
+  display: flex;
+  gap: 10px;
+}
+
+#roomSearch {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#roomTypeFilter, #priceFilter {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 16px;
+}
+
+.no-rooms {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Room image from database */
+.room-db-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .room-controls {
+    flex-direction: column;
+  }
+  
+  .search-container {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .filter-container {
+    flex-wrap: wrap;
+  }
+  
+  #roomTypeFilter, #priceFilter {
+    flex: 1;
+    min-width: 120px;
+  }
+}
+
+/* Existing room styles enhancement */
+.roomselect {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.roombox {
+  width: 280px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+}
+
+.roombox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.hotelphoto {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.roomdata {
+  padding: 15px;
+}
+
+.roomdata h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.roomdata p {
+  margin: 8px 0;
+  color: #666;
+}
+
+.services {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  color: #007bff;
+}
+
+/* Chat Box Styles */
+#chat-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #4361ee;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+#chat-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+#chatbox {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 350px;
+    height: 450px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 998;
+    transition: all 0.3s ease;
+}
+
+.chat-header {
+    background-color: #4361ee;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.chat-header span:last-child {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    max-width: 80%;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.message.bot {
+    background-color: #e9ecef;
+    color: #212529;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+}
+
+.message.user {
+    background-color: #4361ee;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 5px;
+}
+
+.chat-input {
+    padding: 15px;
+    background-color: white;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.chat-input input:focus {
+    border-color: #4361ee;
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+}
+
+.chat-input button {
+    background-color: #4361ee;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.chat-input button:hover {
+    background-color: #3651d4;
+}
+
+/* Animation for chat messages */
+@keyframes messageIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message {
+    animation: messageIn 0.3s ease forwards;
+}
+
+/* Typing indicator */
+.typing-indicator {
+    background-color: #e9ecef;
+    padding: 10px 15px;
+    border-radius: 15px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.typing-indicator span {
+    height: 8px;
+    width: 8px;
+    background-color: #6c757d;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2px;
+    opacity: 0.7;
+}
+
+.typing-indicator span:nth-child(1) {
+    animation: typing 1s infinite 0s;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation: typing 1s infinite 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation: typing 1s infinite 0.4s;
+}
+
+    @keyframes typing {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY
+    }
+}
+
+/* Animation for facility cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#facilities-section .facility-card {
+    opacity: 0;
+}
+
+#facilities-section .facility-card.animate {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Reset and fix for Facilities Section */
+#facilities-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+#facilities-section h2 {
+    margin-bottom: 40px;
+    color: #333;
+    position: relative;
+}
+
+#facilities-section h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #4361ee;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Clear any conflicting styles */
+#facilities-section .facility-card {
+    position: relative;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    margin-bottom: 30px;
+    border: none;
+    background: none;
+}
+
+#facilities-section .facility-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+#facilities-section .facility-image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#facilities-section .facility-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+#facilities-section .facility-card:hover .facility-image img {
+    transform: scale(1.1);
+}
+
+#facilities-section .facility-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+#facilities-section .facility-card:hover .facility-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+#facilities-section .facility-content {
+    color: white;
+    transform: translateY(60px);
+    transition: all 0.4s ease;
+    width: 100%;
+    z-index: 2;
+}
+
+#facilities-section .facility-card:hover .facility-content {
+    transform: translateY(0);
+}
+
+#facilities-section .facility-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Merienda', cursive;
+    color: white;
+}
+
+#facilities-section .facility-content p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#facilities-section .facility-card:hover .facility-content p {
+    opacity: 1;
+}
+
+#facilities-section .facility-content .btn {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease 0.1s;
+    border: 1px solid white;
+    color: white;
+    background: transparent;
+}
+
+#facilities-section .facility-card:hover .facility-content .btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#facilities-section .facility-content .btn:hover {
+    background-color: white;
+    color: #333;
+}
+
+/* Responsive adjustments for facilities */
+@media (max-width: 768px) {
+    #facilities-section .facility-card {
+        height: 250px;
+    }
+    
+    #facilities-section .facility-content {
+        transform: translateY(30px);
+    }
+    
+    #facilities-section .facility-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    #facilities-section .facility-content p {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    #facilities-section .facility-card {
+        height: 200px;
+    }
+    
+    #facilities-section .facility-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    #facilities-section .facility-content p {
+        display: none;
+    }
+    
+    #facilities-section .facility-card:hover .facility-content {
+        transform: translateY(0);
+    }
+    
+    #facilities-section .facility-content .btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+    }
+}

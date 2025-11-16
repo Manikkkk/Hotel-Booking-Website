@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
+    --info-color: #3498db;
+    --light-bg: #f8f9fa;
+    --dark-bg: #343a40;
+    --text-dark: #212529;
+    --text-light: #f8f9fa;
+    --border-color: #dee2e6;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+}
+
+/* Custom background colors for stat icons */
+.bg-primary-subtle {
+    background-color: rgba(52, 152, 219, 0.15);
+}
+
+.bg-success-subtle {
+    background-color: rgba(46, 204, 113, 0.15);
+}
+
+.bg-warning-subtle {
+    background-color: rgba(243, 156, 18, 0.15);
+}
+
+.bg-info-subtle {
+    background-color: rgba(52, 152, 219, 0.15);
+}
+.card-footer {
+    color: black;
+    background-color: white;
+    background-color: rgba(50, 50, 50, 0.03);
+
+
+}
+
+/* Stat icon styling */
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card styling */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-footer {
+    cursor: pointer;
+}
+
+/* Table styling */
+.table th {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.table td {
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+/* Badge styling */
+.badge {
+    padding: 0.5em 0.75em;
+    font-weight: 500;
+}
+
+/* Chart container styling */
+canvas {
+    max-width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
